@@ -1,0 +1,3 @@
+[submodule "argodoll"]
+	path = argodoll
+	url = https://github.com/svetlany/argodoll.git
