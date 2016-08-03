@@ -1,9 +1,0 @@
-title: Argonautica Dolls
-url: https://argodoll.ru
-disqus_shortname: argodoll-ru
-email: argodoll@gmail.com
-permalink: pretty
-markdown: kramdown
-future: true
-gems:
-  - jekyll-sitemap
