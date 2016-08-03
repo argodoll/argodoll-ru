@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /bootstrap/
+Disallow: /jquery/
+Disallow: /js/
+Sitemap: https://argodoll.com/sitemap.xml

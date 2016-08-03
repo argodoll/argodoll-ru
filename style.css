@@ -1,0 +1,89 @@
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+.affix {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+}
+
+a, a:focus, a:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+.no-display {
+    display: none;
+}
+
+.navbar-brand {
+    padding-top: 5px;
+}
+.navbar-brand img {
+    height: 50px;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.photos img {
+    margin-top: 10px;
+}
+
+.simpleCart_items table {
+	width: 100%;
+	text-align: center;
+}
+
+.simpleCart_items th {
+    text-align:center;
+}
+
+.simpleCart_items td {
+	border: solid 1px #ecf0f1;
+	padding: 5px;
+}
+
+.simpleCart_items .headerRow {
+    height: 40px;
+    color: #fff;
+    background: #2c3e50;
+    border: solid 1px #2c3e50;
+}
+
+.simpleCart_items img {
+    border-radius: 5px;
+}
+
+.simpleCart_input
+{
+    width: 30px;
+    height: 35px;
+    border: solid 2px #dce4ec;
+    border-radius: 5px;
+    text-align:center;
+}
+
+.simpleCart_input:focus {
+    border: solid 2px #2c3e50;
+    outline: 0;
+}

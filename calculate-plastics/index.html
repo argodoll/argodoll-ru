@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+      <script type="text/javascript" src="/jquery/jquery-2.1.4.js"></script>
+      <script type="text/javascript">
+    calculate = function() {
+        var a_part = 0;
+        var b_part = 0;
+        switch($("#select_type").val()) {
+            case "SC_305":
+                a_part = 100;
+                b_part = 90;
+                break;
+            case "SC_326":
+                a_part = 115;
+                b_part = 100;
+                break;
+            case "SC_ONYX_S":
+                a_part = 120;
+                b_part = 100;
+                break;
+        }
+        var output_weight = ~~$("#output_weight").val();
+        var multiplier = output_weight / (a_part + b_part);
+        $("#a_part").html(a_part);
+        $("#b_part").html(b_part);
+        $("#a_weight").text((a_part * multiplier).toFixed(0));
+        $("#b_weight").text((b_part * multiplier).toFixed(0));
+
+    }
+    $(document).ready(function() {
+        $('#select_type').change(calculate);
+        $('#output_weight').keyup(calculate);
+        calculate();
+    });
+  </script>
+  <style>
+    div {
+        display: inline;
+    }
+  </style>
+  </head>
+  <body>
+  <select id="select_type">
+      <option value="SC_305" selected>Smooth Cast 305</option>
+      <option value="SC_326">Smooth Cast 326</option>
+      <option value="SC_ONYX_S">Smooth Cast ONYX Slow</option>
+  </select>
+  <table>
+      <tr>
+          <td><div id="a_part"></div>A :</td>
+          <td><div id="b_part"></div>B</td>
+      </tr>
+      <tr>
+          <td><div id="a_weight"></div>g</td>
+          <td><div id="b_weight"></div>g</td>
+      </tr>
+      <tr>
+          <td>Output</td>
+          <td><input type="text" id="output_weight" value="100" size="6"></input>g</td>
+      </tr>
+  </table>
+  </body>
+</html>
