@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://argodoll.ru/news/2018/06/25/kios-prias-preorder/</loc>
+<lastmod>2018-06-25T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>https://argodoll.ru/doll/kios/</loc>
+<lastmod>2018-06-25T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>https://argodoll.ru/doll/prias/</loc>
+<lastmod>2018-06-25T00:00:00+03:00</lastmod>
+</url>
+<url>
 <loc>https://argodoll.ru/news/2018/04/25/outfits/</loc>
 <lastmod>2018-04-25T00:00:00+03:00</lastmod>
 </url>
@@ -219,14 +231,6 @@
 <url>
 <loc>https://argodoll.ru/news/2014/05/07/kios/</loc>
 <lastmod>2014-05-07T00:00:00+04:00</lastmod>
-</url>
-<url>
-<loc>https://argodoll.ru/doll/kios/</loc>
-<lastmod>2014-05-07T00:00:00+04:00</lastmod>
-</url>
-<url>
-<loc>https://argodoll.ru/doll/prias/</loc>
-<lastmod>2014-03-12T00:00:00+04:00</lastmod>
 </url>
 <url>
 <loc>https://argodoll.ru/blog/</loc>
