@@ -150,15 +150,10 @@
 		<div class="col-sm-2 col-sm-offset-7"><strong>Итого:</strong></div>
 		<div class="col-sm-1"><strong><span class="simpleCart_grandTotal"></span></strong></div>
 	</div>
-  
     <hr/>
-
-    <div class="row alert alert-info col-sm-8 col-sm-offset-4" role="alert">
-        Пожалуйста, отправьте нам email с заказм<br><br>
-Мы свяжемся с вами и сможем уточнить этот заказ, рассрочку, способы оплаты и тд.<br/><br>
-
+    <div class="row alert alert-info text-right" role="alert">
+        
     </div>
-
     <hr/>
 
     <div id="checkout" class="row no-display">
@@ -167,9 +162,9 @@
                 <button type="button" class="btn btn-danger">Очистить корзину</button>
             </a>
         </div>
-        <div class="col-sm-1">
-            <a href="javascript:;" class="simpleCart_checkout">
-                <button type="button" class="btn btn-primary">Отправить e-mail для заказа</button>
+        <div class="col-sm-2">
+            <a href="javascript:cartOrderButton();">
+                <button type="button" class="btn btn-primary">Заказать</button>
             </a>
         </div>
     </div>
@@ -182,6 +177,37 @@
 
 <div class="no-display" id="cart-empty">
 	<h4 class="text-center">Корзина пуста</h4>
+</div>
+
+<div class="modal fade" id="orderModalLong" tabindex="-1" role="dialog" aria-labelledby="orderModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="orderModalLongTitle">Заказать</p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <pre id="orderText"></pre>
+        </div>
+        <div class="modal-footer">
+            <div class="row alert alert-info text-left" role="alert">
+                Пожалуйста, отправьте нам email с заказом<br>
+Мы свяжемся с вами и сможем уточнить этот заказ, рассрочку, способы оплаты и тд.
+
+            </div>
+            <div>
+                <a href="javascript:orderCopyClipboard();">
+                    <button type="button" class="btn btn-primary">Скопировать в буфер обмена</button>
+                </a>
+                <a href="javascript:orderSendMail();">
+                    <button type="button" class="btn btn-primary">Отправить e-mail для заказа</button>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
 </div>
 
             <hr/>

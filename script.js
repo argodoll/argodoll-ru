@@ -14878,7 +14878,7 @@ if (typeof jQuery === 'undefined') {
 				localStorage			= window.localStorage,
 				console					= window.console || { msgs: [], log: function (msg) { console.msgs.push(msg); } },
 
-				// used in views
+				// used in views 
 				_VALUE_		= 'value',
 				_TEXT_		= 'text',
 				_HTML_		= 'html',
@@ -14935,7 +14935,7 @@ if (typeof jQuery === 'undefined') {
 					shippingCustom		: null,
 
 					taxRate				: 0,
-
+					
 					taxShipping			: false,
 
 					data				: {}
@@ -15005,12 +15005,12 @@ if (typeof jQuery === 'undefined') {
 					// trigger before add event
 					if (!quiet) {
 					  	addItem = simpleCart.trigger('beforeAdd', [newItem]);
-
+					
 						if (addItem === false) {
 							return false;
 						}
 					}
-
+					
 					// if the new item already exists, increment the value
 					oldItem = simpleCart.has(newItem);
 					if (oldItem) {
@@ -15167,7 +15167,7 @@ if (typeof jQuery === 'undefined') {
 						// send a param of true to make sure it doesn't
 						// update after every removal
 						// keep the item if the function returns false,
-						// because we know it has been prevented
+						// because we know it has been prevented 
 						// from being removed
 						if (item.remove(true) === false) {
 							newItems[item.id()] = item
@@ -15280,8 +15280,8 @@ if (typeof jQuery === 'undefined') {
 					if (!items) {
 						return;
 					}
-
-					// we wrap this in a try statement so we can catch
+					
+					// we wrap this in a try statement so we can catch 
 					// any json parsing errors. no more stick and we
 					// have a playing card pluckin the spokes now...
 					// soundin like a harley.
@@ -15341,7 +15341,7 @@ if (typeof jQuery === 'undefined') {
 				tax: function () {
 					var totalToTax = settings.taxShipping ? simpleCart.total() + simpleCart.shipping() : simpleCart.total(),
 						cost = simpleCart.taxRate() * totalToTax;
-
+					
 					simpleCart.each(function (item) {
 						if (item.get('tax')) {
 							cost += item.get('tax');
@@ -15351,7 +15351,7 @@ if (typeof jQuery === 'undefined') {
 					});
 					return parseFloat(cost);
 				},
-
+				
 				taxRate: function () {
 					return settings.taxRate || 0;
 				},
@@ -15652,7 +15652,7 @@ if (typeof jQuery === 'undefined') {
 						return false;
 					}
 					delete sc_items[this.id()];
-					if (!skipUpdate) {
+					if (!skipUpdate) { 
 						simpleCart.update();
 					}
 					return null;
@@ -15709,10 +15709,10 @@ if (typeof jQuery === 'undefined') {
 			simpleCart.extend({
 				checkout: function () {
 					if (settings.checkout.type.toLowerCase() === 'custom' && isFunction(settings.checkout.fn)) {
-						settings.checkout.fn.call(simpleCart,settings.checkout);
+						settings.checkout.fn.call(simpleCart,settings.checkout, settings);
 					} else if (isFunction(simpleCart.checkout[settings.checkout.type])) {
 						var checkoutData = simpleCart.checkout[settings.checkout.type].call(simpleCart,settings.checkout);
-
+						
 						// if the checkout method returns data, try to send the form
 						if( checkoutData.data && checkoutData.action && checkoutData.method ){
 							// if no one has any objections, send the checkout form
@@ -15720,7 +15720,7 @@ if (typeof jQuery === 'undefined') {
 								simpleCart.generateAndSendForm( checkoutData );
 							}
 						}
-
+						
 					} else {
 						simpleCart.error("No Valid Checkout Method Specified");
 					}
@@ -15784,7 +15784,7 @@ if (typeof jQuery === 'undefined') {
 							item_options = item.options(),
 							optionCount = 0,
 							send;
-
+	
 						// basic item data
 						data["item_name_" + counter] = item.get("name");
 						data["quantity_" + counter] = item.quantity();
@@ -15796,7 +15796,7 @@ if (typeof jQuery === 'undefined') {
 						simpleCart.each(item_options, function (val,k,attr) {
 							// paypal limits us to 10 options
 							if (k < 10) {
-
+		
 								// check to see if we need to exclude this from checkout
 								send = true;
 								simpleCart.each(settings.excludeFromCheckout, function (field_name) {
@@ -15807,7 +15807,7 @@ if (typeof jQuery === 'undefined') {
 										data["on" + k + "_" + counter] = attr;
 										data["os" + k + "_" + counter] = val;
 								}
-
+	
 							}
 						});
 
@@ -16017,18 +16017,8 @@ if (typeof jQuery === 'undefined') {
 						, method	: method
 						, data		: data
 					};
-				},
-
-				SendMail: function (opts) {
-					// email required
-					if (!opts.email) {
-						return simpleCart.error('email required for SendMail Checkout');
-					}
-					var href = 'mailto:' + opts.email +
-						'?subject=' + encodeURIComponent(opts.subject) +
-						'&body=' + encodeURIComponent(opts.body_header + opts.body(settings) + opts.body_footer);
-					window.open(href, '_blank', 'scrollbars=yes,resizable=yes');
 				}
+
 
 			});
 
@@ -16047,10 +16037,10 @@ if (typeof jQuery === 'undefined') {
 					if (!this._events) {
 						this._events = {};
 					}
-
+					
 					// split by spaces to allow for multiple event bindings at once
 					var eventNameList = name.split(/ +/);
-
+					
 					// iterate through and bind each event
 					simpleCart.each( eventNameList , function( eventName ){
 						if (this._events[eventName] === true) {
@@ -16062,10 +16052,10 @@ if (typeof jQuery === 'undefined') {
 						}
 					});
 
-
+					
 					return this;
 				},
-
+				
 				// trigger event
 				trigger: function (name, options) {
 					var returnval = true,
@@ -16107,7 +16097,7 @@ if (typeof jQuery === 'undefined') {
 				, beforeCheckout		: null
 				, beforeRemove			: null
 			};
-
+			
 			// extend with base events
 			simpleCart(baseEvents);
 
@@ -16138,14 +16128,14 @@ if (typeof jQuery === 'undefined') {
 						numParts = num.toFixed(_opts.accuracy).split("."),
 						dec = numParts[1],
 						ints = numParts[0];
-
+			
 					ints = simpleCart.chunk(ints.reverse(), 3).join(_opts.delimiter.reverse()).reverse();
 
 					return	(!_opts.after ? _opts.symbol : "") +
 							ints +
 							(dec ? _opts.decimal + dec : "") +
 							(_opts.after ? _opts.symbol : "");
-
+	
 				},
 
 
@@ -16190,7 +16180,7 @@ if (typeof jQuery === 'undefined') {
 				// bind outlets to function
 				bindOutlets: function (outlets) {
 					simpleCart.each(outlets, function (callback, x, selector) {
-
+						
 						simpleCart.bind('update', function () {
 							simpleCart.setOutlet("." + namespace + "_" + selector, callback);
 						});
@@ -16214,11 +16204,11 @@ if (typeof jQuery === 'undefined') {
 					});
 				},
 
-				// attach events to inputs
+				// attach events to inputs	
 				setInput: function (selector, event, func) {
 					simpleCart.$(selector).live(event, func);
 				}
-			});
+			});		
 
 
 			// class for wrapping DOM selector shit
@@ -16244,7 +16234,7 @@ if (typeof jQuery === 'undefined') {
 						if (isUndefined(val)) {
 							return this.el[0] && this.el[0].get(attr);
 						}
-
+						
 						this.el.set(attr, val);
 						return this;
 					},
@@ -16445,7 +16435,7 @@ if (typeof jQuery === 'undefined') {
 						if (isUndefined(val)) {
 							return this.el[action]();
 						}
-
+						
 						this.el[action](val);
 						return this;
 					},
@@ -16631,7 +16621,7 @@ if (typeof jQuery === 'undefined') {
 													type = $item.attr("type");
 													if (!type || ((type.toLowerCase() === "checkbox" || type.toLowerCase() === "radio") && $item.attr("checked")) || type.toLowerCase() === "text" || type.toLowerCase() === "number") {
 														val = $item.val();
-													}
+													}				
 													break;
 												case "img":
 													val = $item.attr('src');
@@ -16697,7 +16687,7 @@ if (typeof jQuery === 'undefined') {
 				// and execute any waiting functions
 				simpleCart.init();
 			}
-
+			
 			// bind ready event used from jquery
 			function sc_BindReady () {
 
@@ -17035,7 +17025,7 @@ function add_option(options, item, name, label) {
     return options;
 }
 
-function get_email_body(settings) {
+function customCheckout(opts, settings) {
     var body = ''
 
     simpleCart.each(function (item,x) {
@@ -17043,7 +17033,7 @@ function get_email_body(settings) {
             send;
 
         var text = ''
-        text += '\n\nDoll: ' + item.get('name');
+        text += 'Doll: ' + item.get('name');
         if (item.quantity() > 1) {
             text += ', quantity: ' + item.quantity()
         }
@@ -17065,26 +17055,24 @@ function get_email_body(settings) {
             text += '\n    ' + options_list.join(', ')
         }
 
-        body += text
+        body += text + '\n\n'
     });
 
     // shipping
-    body += '\n\nShipping: ' + simpleCart.shipping() + ' ' + simpleCart.currency().code
-    body += '\nTotal:    ' +  + simpleCart.grandTotal() + ' ' + simpleCart.currency().code + '\n\n'
+    body += 'Shipping: ' + simpleCart.shipping() + ' ' + simpleCart.currency().code
+    body += '\nTotal:    ' + simpleCart.grandTotal() + ' ' + simpleCart.currency().code
 
-    return body
+    $('#orderText').text(body)
 }
+
+
 
 simpleCart({
     currency: 'RUB',
 
     checkout: {
-        type: 'SendMail',
-        email: 'argodoll@gmail.com',
-        subject: 'Заказ Argonautica Dolls',
-        body_header: 'Дорогой покупатель!\nПожалуйста, проверьте ваш заказ',
-        body_footer: 'Пожалуйста, отправьте этот мейл, чтобы получить инструкции по оплате заказа',
-        body: get_email_body
+        type: 'Custom',
+        fn: customCheckout
     },
 
     cartColumns: [
@@ -17282,4 +17270,26 @@ $(document).ready(function() {
         .animate({ 'opacity':'toggle' }, 200);
     });
 });
+
+cartOrderButton = function () {
+    simpleCart.checkout();
+    $('#orderModalLong').modal('show');
+}
+
+orderSendMail = function () {
+    $('#orderModalLong').modal('hide');
+
+    var email = 'argodoll@gmail.com'
+    var subject = 'Заказ Argonautica Dolls'
+    var body_header = 'Дорогой покупатель!\nПожалуйста, проверьте ваш заказ'
+    var body_footer = 'Пожалуйста, отправьте этот мейл, чтобы получить инструкции по оплате заказа'
+    var body = $('#orderText').text()
+    var href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) +
+               '&body=' + encodeURIComponent(body_header + '\n\n' + body + '\n\n' + body_footer);
+    window.open(href, '_blank', 'scrollbars=yes,resizable=yes');
+}
+
+orderCopyClipboard = function () {
+    navigator.clipboard.writeText($('#orderText').text())
+}
 
