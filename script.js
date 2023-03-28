@@ -17123,7 +17123,7 @@ simpleCart({
             total += Math.floor((value - 1) / prices.length) * prices[prices.length - 1] 
             total += prices[(value - 1) % prices.length]
         })
-        return total * 70;
+        return total * 75;
     }
 });
 
