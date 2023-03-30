@@ -1,95 +1,235 @@
-@font-face { font-family: ExoBold; src: url(/fonts/exo/Exo2.0-Bold.otf); }
+@font-face {
+  font-family: ExoBold;
+  src: url(/fonts/exo/Exo2.0-Bold.otf);
+}
+@font-face {
+  font-family: ExoLight;
+  src: url(/fonts/exo/Exo2.0-Light.otf);
+}
+@font-face {
+  font-family: Exo;
+  src: url(/fonts/exo/Exo2.0-Regular.otf);
+}
+html {
+  overflow-y: scroll;
+}
 
-@font-face { font-family: ExoLight; src: url(/fonts/exo/Exo2.0-Light.otf); }
+body {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
 
-@font-face { font-family: Exo; src: url(/fonts/exo/Exo2.0-Regular.otf); }
+h1 {
+  font-size: 200%;
+}
 
-html { overflow-y: scroll; }
+.affix {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+}
 
-body { padding-top: 80px; padding-bottom: 20px; }
+a, a:focus, a:hover {
+  outline: 0;
+  text-decoration: none;
+}
 
-h1 { font-size: 200%; }
+a.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
 
-.affix { position: fixed; top: 80px; left: 20px; }
+.no-display {
+  display: none;
+}
 
-a, a:focus, a:hover { outline: 0; text-decoration: none; }
+.navbar-brand {
+  padding-top: 5px;
+}
 
-a.anchor { display: block; position: relative; top: -60px; visibility: hidden; }
+.navbar-brand img {
+  height: 50px;
+}
 
-.no-display { display: none; }
+.carousel-indicators {
+  bottom: 0px;
+}
 
-.navbar-brand { padding-top: 5px; }
+.carousel-caption {
+  bottom: 0px;
+}
 
-.navbar-brand img { height: 50px; }
+.thumbnail img {
+  width: 100%;
+}
 
-.carousel-indicators { bottom: 0px; }
+.thumbnail h3 {
+  font-family: Exo;
+}
 
-.carousel-caption { bottom: 0px; }
+.photos img {
+  margin-top: 10px;
+}
 
-.thumbnail img { width: 100%; }
+.simpleCart_items table {
+  width: 100%;
+  text-align: center;
+}
 
-.thumbnail h3 { font-family: Exo; }
+.simpleCart_items th {
+  text-align: center;
+}
 
-.photos img { margin-top: 10px; }
+.simpleCart_items td {
+  border: solid 1px #ecf0f1;
+  padding: 5px;
+}
 
-.simpleCart_items table { width: 100%; text-align: center; }
+.simpleCart_items .headerRow {
+  height: 40px;
+  color: #fff;
+  background: #2c3e50;
+  border: solid 1px #2c3e50;
+}
 
-.simpleCart_items th { text-align: center; }
+.simpleCart_items img {
+  border-radius: 5px;
+}
 
-.simpleCart_items td { border: solid 1px #ecf0f1; padding: 5px; }
+.simpleCart_input {
+  width: 30px;
+  height: 35px;
+  border: solid 2px #dce4ec;
+  border-radius: 5px;
+  text-align: center;
+}
 
-.simpleCart_items .headerRow { height: 40px; color: #fff; background: #2c3e50; border: solid 1px #2c3e50; }
+.simpleCart_input:focus {
+  border: solid 2px #2c3e50;
+  outline: 0;
+}
 
-.simpleCart_items img { border-radius: 5px; }
+.btn {
+  margin-bottom: 5px;
+}
 
-.simpleCart_input { width: 30px; height: 35px; border: solid 2px #dce4ec; border-radius: 5px; text-align: center; }
+.landing_header {
+  padding-top: 25px;
+  background-color: #02071d;
+}
 
-.simpleCart_input:focus { border: solid 2px #2c3e50; outline: 0; }
+h1 {
+  font-family: Exo;
+  font-size: 220%;
+}
 
-.btn { margin-bottom: 5px; }
+.landing_header h1 {
+  color: white;
+  font-family: Exo;
+  font-size: 300%;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 2px rgb(128, 128, 128);
+}
 
-.landing_header { padding-top: 25px; background-color: #02071d; }
+.landing_header h3 {
+  color: white;
+  font-size: 160%;
+  font-family: ExoLight;
+}
 
-h1 { font-family: Exo; font-size: 220%; }
+@media (min-width: 992px) {
+  .landing_header_background {
+    height: 200px;
+    background-image: url("/images/landing/header.jpeg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+}
+@media (max-width: 991px) {
+  .landing_header_background {
+    background-image: none;
+  }
+}
+.landing_goto_list {
+  margin: 30px;
+}
 
-.landing_header h1 { color: white; font-family: Exo; font-size: 300%; letter-spacing: 5px; text-shadow: 1px 1px 2px gray; }
+.landing_features .media-body {
+  padding: 5px;
+}
 
-.landing_header h3 { color: white; font-size: 160%; font-family: ExoLight; }
+.landing_gallery img {
+  margin-bottom: 3px;
+}
 
-@media (min-width: 992px) { .landing_header_background { height: 200px; background-image: url("/images/landing/header.jpeg"); background-size: auto 100%; background-repeat: no-repeat; background-position: left; } }
+.landing_dolls h3 {
+  font-size: 140%;
+  font-family: Exo;
+  margin: 3px;
+}
 
-@media (max-width: 991px) { .landing_header_background { background-image: none; } }
+.shadow {
+  box-shadow: 0px -9px 10px 10px rgba(0, 0, 0, 0.75);
+}
 
-.landing_goto_list { margin: 30px; }
+.img-shadowed {
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+}
 
-.landing_features .media-body { padding: 5px; }
+.fa, .fab {
+  padding: 8px;
+  font-size: 16px;
+  width: 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20%;
+}
 
-.landing_gallery img { margin-bottom: 3px; }
+.fa:hover, .fab:hover {
+  opacity: 0.9;
+}
 
-.landing_dolls h3 { font-size: 140%; font-family: Exo; margin: 3px; }
+.fa-facebook-f {
+  background: #3B5998;
+  color: white;
+}
 
-.shadow { box-shadow: 0px -9px 10px 10px rgba(0, 0, 0, 0.75); }
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
 
-.img-shadowed { box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5); }
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+}
 
-.fa, .fab { padding: 8px; font-size: 16px; width: 32px; text-align: center; text-decoration: none; border-radius: 20%; }
+.fa-youtube {
+  background: #ff0000;
+  color: white;
+}
 
-.fa:hover, .fab:hover { opacity: 0.9; }
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
 
-.fa-facebook-f { background: #3B5998; color: white; }
+.fa-deviantart {
+  background: #2c4762;
+  color: white;
+}
 
-.fa-twitter { background: #55ACEE; color: white; }
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
 
-.fa-instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; }
-
-.fa-youtube { background: #ff0000; color: white; }
-
-.fa-tumblr { background: #2c4762; color: white; }
-
-.fa-deviantart { background: #2c4762; color: white; }
-
-.fa-flickr { background: #f40083; color: white; }
-
-.fa-pen-nib { background: #f40083; color: white; }
+.fa-pen-nib {
+  background: #f40083;
+  color: white;
+}
 
 /*# sourceMappingURL=style.css.map */
