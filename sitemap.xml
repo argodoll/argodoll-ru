@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://argodoll.ru/news/2023/06/29/chibi-preorder/</loc>
+<lastmod>2023-06-29T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>https://argodoll.ru/chibi/doll/bolty/</loc>
+<lastmod>2023-06-29T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>https://argodoll.ru/chibi/rusly/</loc>
+<lastmod>2023-06-28T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>https://argodoll.ru/chibi/truffy/</loc>
+<lastmod>2023-06-27T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>https://argodoll.ru/chibi/bolty-deer/</loc>
+<lastmod>2023-06-26T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>https://argodoll.ru/chibi/rusly-deer/</loc>
+<lastmod>2023-06-25T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>https://argodoll.ru/chibi/truffy-deer/</loc>
+<lastmod>2023-06-24T00:00:00+03:00</lastmod>
+</url>
+<url>
 <loc>https://argodoll.ru/medium/head/medea/</loc>
 <lastmod>2023-03-30T00:00:00+03:00</lastmod>
 </url>
@@ -465,6 +493,9 @@
 </url>
 <url>
 <loc>https://argodoll.ru/cart/</loc>
+</url>
+<url>
+<loc>https://argodoll.ru/chibi/</loc>
 </url>
 <url>
 <loc>https://argodoll.ru/contacts/</loc>

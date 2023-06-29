@@ -16769,6 +16769,10 @@ const optionLabels = [
     
     { name: 'color', label: 'Цвет' },
     
+    { name: 'color-chibi', label: 'Цвет человека' },
+    
+    { name: 'color-deer', label: 'Цвет оленя' },
+    
     { name: 'breast', label: 'Размер груди' },
     
     { name: 'torso', label: 'Туловище' },
@@ -16785,6 +16789,8 @@ const optionLabels = [
     
     { name: 'bodytype', label: 'Тело' },
     
+    { name: 'bodytype-chibi', label: 'Тело' },
+    
     { name: 'forceps', label: 'Зажим' },
     
     { name: 'adapter', label: 'Шейный переходник' },
@@ -16792,6 +16798,16 @@ const optionLabels = [
     { name: 'jewelry', label: 'Украшения' },
     
     { name: 'outfit', label: 'Аутфит' },
+    
+    { name: 'chibi-parts-a', label: 'Рога A' },
+    
+    { name: 'chibi-parts-b', label: 'Уши B' },
+    
+    { name: 'chibi-parts-c', label: 'Уши C' },
+    
+    { name: 'chibi-parts-d', label: 'Рога D' },
+    
+    { name: 'chibi-parts-e', label: 'Рога E' },
     
 ];
 
@@ -16861,6 +16877,48 @@ function calculatePrice() {
 
 
 
+
+
+
+
+
+
+
+
+
+    if ($('.item_color-chibi').val() === 'Тан')
+        price += ~~$('.color_price').text();
+
+
+
+    if ($('.item_color-chibi').val() === 'Коричневый')
+        price += ~~$('.color_price').text();
+
+
+
+    if ($('.item_color-chibi').val() === 'Чёрный')
+        price += ~~$('.color_price').text();
+
+
+
+
+
+
+
+
+
+    if ($('.item_color-deer').val() === 'Тан')
+        price += ~~$('.color_price').text();
+
+
+
+    if ($('.item_color-deer').val() === 'Коричневый')
+        price += ~~$('.color_price').text();
+
+
+
+    if ($('.item_color-deer').val() === 'Чёрный')
+        price += ~~$('.color_price').text();
 
 
 
@@ -16979,6 +17037,12 @@ function calculatePrice() {
 
 
 
+
+
+
+
+
+
     if ($('.item_forceps').val() === 'Да')
         price += ~~$('.forceps_price').text();
 
@@ -17006,6 +17070,51 @@ function calculatePrice() {
 
     if ($('.item_outfit').val() === 'Да')
         price += ~~$('.outfit_price').text();
+
+
+
+
+
+
+
+    if ($('.item_chibi-parts-a').val() === 'Да')
+        price += ~~$('.chibi-parts_price').text();
+
+
+
+
+
+
+
+    if ($('.item_chibi-parts-b').val() === 'Да')
+        price += ~~$('.chibi-parts_price').text();
+
+
+
+
+
+
+
+    if ($('.item_chibi-parts-c').val() === 'Да')
+        price += ~~$('.chibi-parts_price').text();
+
+
+
+
+
+
+
+    if ($('.item_chibi-parts-d').val() === 'Да')
+        price += ~~$('.chibi-parts_price').text();
+
+
+
+
+
+
+
+    if ($('.item_chibi-parts-e').val() === 'Да')
+        price += ~~$('.chibi-parts_price').text();
 
 
 
@@ -17123,7 +17232,7 @@ simpleCart({
             total += Math.floor((value - 1) / prices.length) * prices[prices.length - 1] 
             total += prices[(value - 1) % prices.length]
         })
-        return total * 75;
+        return total * 85;
     }
 });
 
