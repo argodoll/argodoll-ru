@@ -61,6 +61,10 @@ a.anchor {
   bottom: 0px;
 }
 
+.carousel-control {
+  width: 5%;
+}
+
 .thumbnail img {
   width: 100%;
 }
