@@ -16814,7 +16814,7 @@ const optionLabels = [
 const shippingAreas = new Map([
     
     ['area1', {
-      big:    [8, 9],
+      big:    [10, 10],
       medium: [6, 8, 8, 9],
       small:  [5, 6, 7, 8],
     }],
