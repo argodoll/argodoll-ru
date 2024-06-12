@@ -16785,6 +16785,8 @@ const optionLabels = [
     
     { name: 'shoes', label: 'Туфли' },
     
+    { name: 'shoes-male', label: 'Ботинки' },
+    
     { name: 'makeup', label: 'Макияж' },
     
     { name: 'bodytype', label: 'Тело' },
@@ -16799,6 +16801,10 @@ const optionLabels = [
     
     { name: 'outfit', label: 'Аутфит' },
     
+    { name: 'wig', label: 'Парик' },
+    
+    { name: 'bust-head', label: 'Выберите голову' },
+    
     { name: 'chibi-parts-a', label: 'Рога A' },
     
     { name: 'chibi-parts-b', label: 'Уши B' },
@@ -16808,6 +16814,10 @@ const optionLabels = [
     { name: 'chibi-parts-d', label: 'Рога D' },
     
     { name: 'chibi-parts-e', label: 'Рога E' },
+    
+    { name: 'skull-new-male', label: 'Череп' },
+    
+    { name: 'hands-new-male', label: 'Руки' },
     
 ];
 
@@ -16877,6 +16887,11 @@ function calculatePrice() {
 
 
 
+
+
+
+    if ($('.item_color').val() === 'Кастом')
+        price += ~~$('.color_price').text();
 
 
 
@@ -17008,6 +17023,15 @@ function calculatePrice() {
 
 
 
+    if ($('.item_shoes-male').val() === 'Да')
+        price += ~~$('.shoes_price').text();
+
+
+
+
+
+
+
     if ($('.item_makeup').val() === 'Да')
         price += ~~$('.makeup_price').text();
 
@@ -17081,6 +17105,24 @@ function calculatePrice() {
 
 
 
+    if ($('.item_wig').val() === 'Да')
+        price += ~~$('.wig_price').text();
+
+
+
+
+
+
+
+    if ($('.item_bust-head').val() === 'Добавить голову')
+        price += ~~$('.bust-head_price').text();
+
+
+
+
+
+
+
     if ($('.item_chibi-parts-a').val() === 'Да')
         price += ~~$('.chibi-parts_price').text();
 
@@ -17121,6 +17163,58 @@ function calculatePrice() {
         price += ~~$('.chibi-parts_price').text();
 
 
+
+
+
+
+
+
+
+    if ($('.item_skull-new-male').val() === 'Сокол')
+        price += ~~$('.skull_price').text();
+
+
+
+    if ($('.item_skull-new-male').val() === 'Бобр')
+        price += ~~$('.skull_price').text();
+
+
+
+
+
+
+
+    if ($('.item_hands-new-male').val() === '')
+        price += ~~$('.hands-optional_price').text();
+
+
+
+    if ($('.item_hands-new-male').val() === '')
+        price += ~~$('.hands-optional_price').text();
+
+
+
+    if ($('.item_hands-new-male').val() === '')
+        price += ~~$('.hands-optional_price').text();
+
+
+
+    if ($('.item_hands-new-male').val() === '')
+        price += ~~$('.hands-optional_price').text();
+
+    if ($('.item_hands-new-male').val() === '')
+        price += ~~$('.hands-optional_price').text();
+
+
+
+    if ($('.item_hands-new-male').val() === '')
+        price += ~~$('.hands-optional_price').text();
+
+    if ($('.item_hands-new-male').val() === '')
+        price += ~~$('.hands-optional_price').text();
+
+    if ($('.item_hands-new-male').val() === '')
+        price += ~~$('.hands-optional_price').text();
 
 
 
