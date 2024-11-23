@@ -16855,6 +16855,8 @@ function calculatePrice() {
 
 
 
+
+
     if ($('.item_color').val() === 'Чёрный')
         price += ~~$('.color_price').text();
 
@@ -16892,6 +16894,8 @@ function calculatePrice() {
 
     if ($('.item_color').val() === 'Кастом')
         price += ~~$('.color_price').text();
+
+
 
 
 
