@@ -16777,6 +16777,8 @@ const optionLabels = [
     
     { name: 'torso', label: 'Туловище' },
     
+    { name: 'horns', label: 'Рога' },
+    
     { name: 'fists', label: 'Кулаки' },
     
     { name: 'feet', label: 'Каблучные ступни' },
@@ -16815,9 +16817,9 @@ const optionLabels = [
     
     { name: 'chibi-parts-e', label: 'Рога E' },
     
-    { name: 'skull-new-male', label: 'Череп' },
+    { name: 'skull', label: 'Череп' },
     
-    { name: 'hands-new-male', label: 'Руки' },
+    { name: 'hands', label: 'Руки' },
     
 ];
 
@@ -16942,6 +16944,12 @@ function calculatePrice() {
 
     if ($('.item_color-deer').val() === 'Чёрный')
         price += ~~$('.color_price').text();
+
+
+
+
+
+
 
 
 
@@ -17174,12 +17182,12 @@ function calculatePrice() {
 
 
 
-    if ($('.item_skull-new-male').val() === 'Сокол')
+    if ($('.item_skull').val() === 'Сокол')
         price += ~~$('.skull_price').text();
 
 
 
-    if ($('.item_skull-new-male').val() === 'Бобр')
+    if ($('.item_skull').val() === 'Бобёр')
         price += ~~$('.skull_price').text();
 
 
@@ -17188,37 +17196,37 @@ function calculatePrice() {
 
 
 
-    if ($('.item_hands-new-male').val() === '')
-        price += ~~$('.hands-optional_price').text();
+    if ($('.item_hands').val() === 'Базовые + Пара А')
+        price += ~~$('.hands_price').text();
 
 
 
-    if ($('.item_hands-new-male').val() === '')
-        price += ~~$('.hands-optional_price').text();
+    if ($('.item_hands').val() === 'Базовые + Пара Б')
+        price += ~~$('.hands_price').text();
 
 
 
-    if ($('.item_hands-new-male').val() === '')
-        price += ~~$('.hands-optional_price').text();
+    if ($('.item_hands').val() === 'Базовые + Кулаки')
+        price += ~~$('.hands_price').text();
 
 
 
-    if ($('.item_hands-new-male').val() === '')
-        price += ~~$('.hands-optional_price').text();
+    if ($('.item_hands').val() === 'Базовые + Пара А + Пара Б')
+        price += ~~$('.hands_price').text();
 
-    if ($('.item_hands-new-male').val() === '')
-        price += ~~$('.hands-optional_price').text();
+    if ($('.item_hands').val() === 'Базовые + Пара А + Пара Б')
+        price += ~~$('.hands_price').text();
 
 
 
-    if ($('.item_hands-new-male').val() === '')
-        price += ~~$('.hands-optional_price').text();
+    if ($('.item_hands').val() === 'Базовые + А + Б + Кулаки')
+        price += ~~$('.hands_price').text();
 
-    if ($('.item_hands-new-male').val() === '')
-        price += ~~$('.hands-optional_price').text();
+    if ($('.item_hands').val() === 'Базовые + А + Б + Кулаки')
+        price += ~~$('.hands_price').text();
 
-    if ($('.item_hands-new-male').val() === '')
-        price += ~~$('.hands-optional_price').text();
+    if ($('.item_hands').val() === 'Базовые + А + Б + Кулаки')
+        price += ~~$('.hands_price').text();
 
 
 
