@@ -13577,9 +13577,9 @@ const optionLabels = [
 const shippingAreas = new Map([
     
     ['area1', {
-      big:    [10, 10],
-      medium: [6, 8, 8, 9],
-      small:  [5, 6, 7, 8],
+      big:    [20, 20],
+      medium: [12, 16, 16, 18],
+      small:  [10, 12, 14, 16],
     }],
     
 ])
@@ -13642,6 +13642,11 @@ function calculatePrice() {
 
 
 
+
+
+
+    if ($('.item_color').val() === 'Красный')
+        price += ~~$('.color_price').text();
 
 
 
