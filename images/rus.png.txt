@@ -1,7 +1,0 @@
-<span class="no-display" id="alternative-site" style="position: fixed; top: 0; left: 0; z-index: 10000;"><a href="{{ site.urls.ru }}"><img src="/images/rus.png"/></a></span>
-
-{% if site.lang == 'en' %}
-    var language = navigator.language || navigator.userLanguage;
-    if (language.toLowerCase().indexOf('ru') == 0)
-        $('#alternative-site').show();
-{% endif %}
